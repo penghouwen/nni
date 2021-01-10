@@ -9,7 +9,7 @@ NNI 支持使用 `FrameworkController <https://github.com/Microsoft/frameworkcon
 
 
 #. 采用 **Kubernetes 1.8** 或更高版本。 根据 `指南 <https://kubernetes.io/docs/setup/>`__ 来安装 Kubernetes。
-#. 配置 **kubeconfig** 文件，NNI 将使用此配置与 Kubernetes API 服务交互。 默认情况下，NNI 管理器会使用 ``$(HOME)/.kube/config`` 作为 kubeconfig 文件的路径。 也可以通过环境变量 **KUBECONFIG** 来指定其它 kubeconfig 文件。 根据 `指南 <https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig>`__ 了解更多 kubeconfig 的信息。
+#. 配置 **kubeconfig** 文件，NNI 将使用此配置与 Kubernetes API 服务交互。 默认情况下，NNI 管理器会使用 $(HOME)/.kube/config 作为 kubeconfig 文件的路径。 也可以通过环境变量 **KUBECONFIG** 来指定其它 kubeconfig 文件。 根据 `指南 <https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig>`__ 了解更多 kubeconfig 的信息。
 #. 如果 NNI Trial 作业需要 GPU 资源，需按照 `指南 <https://github.com/NVIDIA/k8s-device-plugin>`__ 来配置 **Kubernetes 下的 Nvidia 插件**。
 #. 准备 **NFS 服务器** 并导出通用的装载 (mount)，推荐将 NFS 服务器路径映射到 **root_squash 选项**，否则可能会在 NNI 复制文件到 NFS 时出现权限问题。 参考 `页面 <https://linux.die.net/man/5/exports>`__，来了解关于 root_squash 选项，或 **Azure File Storage**。
 #. 在安装 NNI 并运行 nnictl 的计算机上安装 **NFS 客户端**。 运行此命令安装 NFSv4 客户端：
@@ -24,10 +24,10 @@ Azure 部署的 Kubernetes 的准备工作
 -----------------------------------------
 
 
-#. NNI 支持基于 Azure Kubernetes Service 的 Kubeflow，参考 `指南 <https://azure.microsoft.com/zh-cn/services/kubernetes-service/>`__ 来设置 Azure Kubernetes Service。
-#. 安装 `Azure CLI <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest>`__ 和 ``kubectl``。  使用 ``az login`` 命令来设置 Azure 账户，并将 kubectl 客户端连接到 AKS，参考此 `指南 <https://docs.microsoft.com/zh-cn/azure/aks/kubernetes-walkthrough#connect-to-the-cluster>`__。
-#. 参考此  `指南 <https://docs.microsoft.com/zh-cn/azure/storage/common/storage-quickstart-create-account?tabs=portal>`__ 来创建 Azure 文件存储账户。 NNI 需要 Azure Storage Service 来存取代码和输出文件。
-#. NNI 需要访问密钥来连接 Azure 存储服务，NNI 使用 `Azure Key Vault <https://azure.microsoft.com/zh-cn/services/key-vault/>`__ 服务来保护私钥。 设置 Azure Key Vault 服务，并添加密钥到 Key Vault 中来存取 Azure 存储账户。 参考 `指南 <https://docs.microsoft.com/zh-cn/azure/key-vault/quick-create-cli>`__ 来存储访问密钥。
+#. NNI 支持基于 Azure Kubernetes Service 的 Kubeflow，参考 `指南 <https://azure.microsoft.com/en-us/services/kubernetes-service/>`__ 来设置 Azure Kubernetes Service。
+#. 安装 `Azure CLI <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest>`__ 和 ``kubectl``。  使用 ``az login`` 命令来设置 Azure 账户，并将 kubectl 客户端连接到 AKS，参考此 `指南 <https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough#connect-to-the-cluster>`__。
+#. 参考此  `指南 <https://docs.microsoft.com/en-us/azure/storage/common/storage-quickstart-create-account?tabs=portal>`__ 来创建 Azure 文件存储账户。 NNI 需要 Azure Storage Service 来存取代码和输出文件。
+#. NNI 需要访问密钥来连接 Azure 存储服务，NNI 使用 `Azure Key Vault <https://azure.microsoft.com/en-us/services/key-vault/>`__ 服务来保护私钥。 设置 Azure Key Vault 服务，并添加密钥到 Key Vault 中来存取 Azure 存储账户。 参考 `指南 <https://docs.microsoft.com/en-us/azure/key-vault/quick-create-cli>`__ 来存储访问密钥。
 
 安装 FrameworkController
 -------------------------

@@ -35,7 +35,7 @@ NNI 在一些基准模型和数据集上使用各种剪枝算法进行了广泛�
     对于迭代式剪枝器，使用 ``L1Filter Pruner`` 作为基础算法。 也就是说, 在迭代式剪枝器决定了稀疏度分布之后，使用 ``L1Filter Pruner`` 进行真正的剪枝。
 
   * 
-    上面列出来的所有的剪枝器都已经在 :githublink:`nni <docs/zh_CN/Compression/Overview.rst>` 中实现。
+    上面列出来的所有的剪枝器都已经在 :githublink:`nni <docs/en_US/Compression/Overview.rst>` 中实现。
 
 实验结果
 -----------------
@@ -92,7 +92,7 @@ CIFAR-10, ResNet50:
   实验结果都是在 NNI 中使用剪枝器的默认配置收集的，这意味着当我们在 NNI 中调用一个剪枝器类时，我们不会更改任何默认的类参数。
 
 * 
-  FLOPs 和 参数数量均通过 :githublink:`模型 FLOPs 和参数量计数器 <docs/zh_CN/Compression/CompressionUtils.md#model-flopsparameters-counter>` 在 :githublink:`模型加速 <docs/zh_CN/Compression/ModelSpeedup.rst>` 后计算。
+  FLOPs 和 参数数量均通过 :githublink:`模型 FLOPs 和参数量计数器 <docs/en_US/Compression/CompressionUtils.md#model-flopsparameters-counter>` 在 :githublink:`模型加速 <docs/en_US/Compression/ModelSpeedup.rst>` 后计算。
   这避免了依据掩码模型计算的潜在问题。
 
 * 
@@ -103,7 +103,7 @@ CIFAR-10, ResNet50:
 
 
 * 
-  如果遵循 :githublink:`示例 <examples/model_compress/auto_pruners_torch.py>` 的做法，对于每一次剪枝实验，实验结果将以JSON格式保存如下：
+  如果遵循 :githublink:`示例 <examples/model_compress/auto_pruners_torch.py>`\ 的做法，对于每一次剪枝实验，实验结果将以JSON格式保存如下：
 
   .. code-block:: json
 
@@ -114,7 +114,8 @@ CIFAR-10, ResNet50:
        }
 
 * 
-  实验代码在 :githublink:`这里 <examples/model_compress/comparison_of_pruners>`。可以参考 :githublink:`分析 <examples/model_compress/comparison_of_pruners/analyze.py>` 来绘制新的性能比较图。
+  实验代码在 :githublink:`这里 <examples/model_compress/comparison_of_pruners>`. 
+  可以参开 :githublink:`分析 <examples/model_compress/comparison_of_pruners/analyze.py>` 来绘制新的性能比较图。
 
 贡献
 ------------

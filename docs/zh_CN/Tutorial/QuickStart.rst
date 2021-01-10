@@ -217,7 +217,7 @@ Windows
 如果根据上述步骤准备好了相应 ``Trial`` ， ``搜索空间`` 和 ``配置`` ，并成功创建的 NNI 任务。NNI 会自动开始通过配置的搜索空间来运行不同的超参集合，搜索最好的超参。 通过 Web 界面可看到 NNI 的进度。
 
 Web 界面
----------------
+-----
 
 启动 Experiment 后，可以在命令行界面找到如下的 ``Web 界面地址`` ：
 
@@ -310,7 +310,7 @@ Experiment 相关信息会显示在界面上，配置和搜索空间等。 可�
 * `尝试不同的 Assessor <../Assessor/BuiltinAssessor.rst>`__
 * `如何使用命令行工具 nnictl <Nnictl.rst>`__
 * `如何实现 Trial 代码 <../TrialExample/Trials.rst>`__
-* `如何在本机运行 Experiment (支持多 GPU 卡)？ <../TrainingService/LocalMode.rst>`__
+* 如何在本机运行 Experiment (支持多 GPU 卡)？ <../TrainingService/LocalMode.rst>`__
 * `如何在多机上运行 Experiment？ <../TrainingService/RemoteMachineMode.rst>`__
 * `如何在 OpenPAI 上运行 Experiment？ <../TrainingService/PaiMode.rst>`__
 * `如何通过 Kubeflow 在 Kubernetes 上运行 Experiment？ <../TrainingService/KubeflowMode.rst>`__

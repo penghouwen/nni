@@ -71,7 +71,7 @@ TPE 是一种黑盒优化方法，可以使用在各种场景中，通常情况�
 **classArgs 要求：**
 
 
-* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
+* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*\ ) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
 
 注意：为实现大规模并发 Trial，TPE 的并行性得到了优化。 有关优化原理或开启优化，参考 `TPE 文档 <./HyperoptTuner.rst>`__。
 
@@ -90,7 +90,7 @@ TPE 是一种黑盒优化方法，可以使用在各种场景中，通常情况�
 :raw-html:`<a name="Random"></a>`
 
 Random Search（随机搜索）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^
 
 ..
 
@@ -114,7 +114,7 @@ Random Search（随机搜索）
 :raw-html:`<a name="Anneal"></a>`
 
 Anneal（退火算法）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^
 
 ..
 
@@ -128,7 +128,7 @@ Anneal（退火算法）
 **classArgs 要求：**
 
 
-* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
+* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*\ ) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
 
 **配置示例：**
 
@@ -145,7 +145,7 @@ Anneal（退火算法）
 :raw-html:`<a name="Evolution"></a>`
 
 Naïve Evolution（进化算法）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 ..
 
@@ -223,7 +223,7 @@ SMAC 在第一次使用前，必须用下面的命令先安装。 注意：SMAC 
 :raw-html:`<a name="Batch"></a>`
 
 Batch Tuner（批量调参器）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 ..
 
@@ -266,7 +266,7 @@ Batch Tuner（批量调参器）
 :raw-html:`<a name="GridSearch"></a>`
 
 Grid Search（网格搜索）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
 
 ..
 
@@ -306,9 +306,9 @@ Hyperband
 **classArgs 要求：**
 
 
-* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
+* **optimize_mode** (*maximize 或 minimize, 可选项, 默认值为 maximize*\ ) - 如果为 'maximize'，表示 Tuner 会试着最大化指标。 如果为 'minimize'，表示 Tuner 的目标是将指标最小化。
 * **R** (*int, 可选, 默认为 60*)，分配给 Trial 的最大资源（可以是 mini-batches 或 epochs 的数值）。 每个 Trial 都需要用 TRIAL_BUDGET 来控制运行的步数。
-* **eta** (*int，可选，默认为 3*)，``(eta-1)/eta`` 是丢弃 Trial 的比例。
+* **eta** (*int，可选，默认为 3)，``(eta-1)/eta`` 是丢弃 Trial 的比例。
 * **exec_mode** (*串行或并行，可选默认值是并行*\ )，如果是“并行”， Tuner 会尝试使用可用资源立即启动新的分组。 如果是“串行”， Tuner 只会在当前分组完成后启动新的分组。
 
 **配置示例：**
@@ -580,6 +580,6 @@ Population Based Training (PBT，基于种群的训练)，将并扩展并行搜�
 
 * 在Github 中 `提交此功能的 Bug <https://github.com/microsoft/nni/issues/new?template=bug-report.rst>`__
 * 在Github 中 `提交新功能或请求改进 <https://github.com/microsoft/nni/issues/new?template=enhancement.rst>`__
-* 了解 NNI 中 `特征工程的更多信息 <../FeatureEngineering/Overview.rst>`__
-* 了解 NNI 中 `NAS 的更多信息 <../NAS/Overview.rst>`__
-* 了解 NNI 中 `模型压缩的更多信息 <../Compression/Overview.rst>`__
+* 了解 NNI 中 :githublink:`特征工程的更多信息 <docs/en_US/FeatureEngineering/Overview.rst>`
+* 了解 NNI 中 :githublink:`NAS 的更多信息 <docs/en_US/NAS/Overview.rst>`
+* 了解 NNI 中 :githublink:`模型压缩的更多信息 <docs/en_US/Compression/Overview.rst>`
